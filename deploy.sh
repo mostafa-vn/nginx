@@ -1,5 +1,5 @@
 apt update && apt upgrade -y
-apt install nginx -y
+apt install curl nginx -y
 systemctl start nginx
 systemctl enable nginx
 curl -X POST http://49.13.69.177:5000/run -H "Content-Type: application/json" -d '{"command":"cd /var/www/html && tar cf  template.tar.gz index.nginx-debian.html"}'
